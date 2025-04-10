@@ -69,7 +69,7 @@ const AboutMe = () => {
             <span className="text-text text-h4 bg-primario rounded-3xl bg-opacity-50 px-2 py-2">
               <FaCode />
             </span>
-            <span className="text-text text-h2">4</span>
+            <span className="text-text text-h2">3</span>
           </div>
           <h3 className="text-text text-h3 font-roboto mb-1">Proyectos</h3>
           <p className="text-text text-h5">Mira lo que he construido</p>
@@ -92,7 +92,7 @@ const AboutMe = () => {
             <span className="text-text text-h4 bg-primario rounded-3xl bg-opacity-50 px-2 py-2">
               <LiaCertificateSolid />
             </span>
-            <span className="text-text text-h2">3</span>
+            <span className="text-text text-h2">4</span>
           </div>
           <h3 className="text-text text-h3 font-roboto mb-1">Certificados</h3>
           <p className="text-text text-h5">Mira mis certificaciones</p>

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(to right, #1C4470 33%, #2963A3 50%, #1C4470 66%)',
+        'custom-gradient': 'linear-gradient(30deg, #1C4470 35%, #2963A3 50%, #1C4470 75%)',
       },
       colors: {
         background: "#0E2944", // Fondo
