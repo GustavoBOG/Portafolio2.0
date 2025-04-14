@@ -1,10 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TbWorld } from "react-icons/tb";
 import { FaGear } from "react-icons/fa6";
 import { BsTools } from "react-icons/bs";
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('FRONTEND');
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  // Detectar tamaño de pantalla para ajustes responsivos
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 640);
+      setIsTablet(window.innerWidth >= 640 && window.innerWidth < 1024);
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   const skillsData = {
     FRONTEND: [
@@ -37,14 +52,28 @@ const Skills = () => {
     ]
   };
 
-  const categoryLayout = {
-    FRONTEND: { cols: 3, rows: 2 },
-    BACKEND: { cols: 4, rows: 1 },
-    TOOLS: { cols: 6, rows: 2 }
+  // Configuraciones de layout para diferentes tamaños de pantalla
+  const getCategoryLayout = (category) => {
+    if (isMobile || isTablet) {
+      switch(category) {
+        case 'FRONTEND': return { cols: 3, rows: 2 }; // Se mantiene igual
+        case 'BACKEND': return { cols: 2, rows: 2 }; // Cambia a 2x2
+        case 'TOOLS': return { cols: 3, rows: 4 }; // Cambia a 3x4
+        default: return { cols: 2, rows: 2 };
+      }
+    } else {
+      // Layout para pantallas grandes (original)
+      switch(category) {
+        case 'FRONTEND': return { cols: 3, rows: 2 };
+        case 'BACKEND': return { cols: 4, rows: 1 };
+        case 'TOOLS': return { cols: 6, rows: 2 };
+        default: return { cols: 3, rows: 2 };
+      }
+    }
   };
 
   const categoryIcons = {
-    FRONTEND: <TbWorld className=" text-text text-h1" />,
+    FRONTEND: <TbWorld className="text-text text-h1" />,
     BACKEND: <FaGear className="text-text text-h1" />,
     TOOLS: <BsTools className="text-text text-h1" />
   };
@@ -52,27 +81,29 @@ const Skills = () => {
   return (
     <section className="w-full min-h-[calc(100vh-80px)] bg-background py-10 relative">
       <div>
-        <div className=" text-center">
+        <div className="text-center">
           <h2 className="text-text text-h1 font-roboto">Skills</h2>
         </div>
         
         <div className="mb-10 w-full bg-header py-4 px-6 relative">
-          <div className="grid grid-cols-3 gap-4  w-full mx-auto"> 
+          <div className="grid grid-cols-3 gap-4 w-full mx-auto"> 
             {Object.keys(skillsData).map((category) => (
               <button
                 key={category}
-                className={`flex flex-col items-center justify-center py-2  rounded-xl cursor-pointer transition-all duration-300 ${
+                className={`flex flex-col items-center justify-center py-2 rounded-xl cursor-pointer transition-all duration-300 ${
                   activeCategory === category ? 'bg-[#264470]' : 'shadow-inner shadow-white/10'
                 }`}
                 style={{
-                  boxShadow: activeCategory === category ? '8px 8px 4px rgba(0, 0, 0, 0.25)' : 'inset 8px 8px 4px  rgba(15, 15, 15, 0.46)'
+                  boxShadow: activeCategory === category ? '8px 8px 4px rgba(0, 0, 0, 0.25)' : 'inset 8px 8px 4px rgba(15, 15, 15, 0.46)'
                 }}
                 onClick={() => setActiveCategory(category)}
               >
                 <div className="mb-2">
                   {categoryIcons[category]}
                 </div>
-                <span className="text-text font-roboto text-h4">{category}</span>
+                <span className={`text-text font-roboto ${isMobile ? 'text-xs' : isTablet ? 'text-sm' : 'text-h4'}`}>
+                  {category}
+                </span>
               </button>
             ))}
           </div>
@@ -80,10 +111,10 @@ const Skills = () => {
         
         <div className="flex justify-center">
           <div 
-            className={`grid gap-8 max-w-6xl w-full`}
+            className="grid gap-8 max-w-6xl w-full"
             style={{
-              gridTemplateColumns: `repeat(${categoryLayout[activeCategory].cols}, minmax(0, 1fr))`,
-              gridTemplateRows: `repeat(${categoryLayout[activeCategory].rows}, minmax(0, 1fr))`
+              gridTemplateColumns: `repeat(${getCategoryLayout(activeCategory).cols}, minmax(0, 1fr))`,
+              gridTemplateRows: `repeat(${getCategoryLayout(activeCategory).rows}, minmax(0, 1fr))`
             }}
           >
             {skillsData[activeCategory].map((skill, index) => (
@@ -95,10 +126,12 @@ const Skills = () => {
                   <img 
                     src={skill.icon} 
                     alt={skill.alt}
-                    className="w-36 h-36 object-contain hover:scale-125 transition-all" 
+                    className={`${isMobile ? 'w-16 h-16' : isTablet ? 'w-24 h-24' : 'w-36 h-36'} object-contain hover:scale-125 transition-all`} 
                   />
                 </div>
-                <span className="text-text text-h5 text-center font-roboto mt-5 ">{skill.name}</span>
+                <span className={`text-text text-center font-roboto mt-5 ${isMobile ? 'text-xs' : isTablet ? 'text-sm' : 'text-h5'}`}>
+                  {skill.name}
+                </span>
               </div>
             ))}
           </div>

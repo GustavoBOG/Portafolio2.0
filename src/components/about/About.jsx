@@ -45,14 +45,16 @@ const AboutMe = () => {
               <img 
                 src="/images/robot.png" 
                 alt="Robot" 
-                className="relative bottom-10 left-[150px] w-full max-w-lg object-contain"
+                className="relative w-full max-w-lg object-contain 
+             bottom-[-700px] sm:bottom-[-40px] md:bottom-[-60px] lg:bottom-10 
+             left-[50px] sm:left-[80px] md:left-[120px] lg:left-[150px]"
               />
             </div>
           </div>
         </div>
 
 {/* Tarjetas - Centradas debajo */}
-<div className="w-full flex justify-center mt-12 z-20 relative">
+<div className="w-full flex justify-center mt-64 md:mt-12 z-20 relative">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full max-w-5xl">
     {/* Tarjeta Proyectos - Con Link y efecto hover */}
     <Link to="/projects" className="block">
