@@ -219,10 +219,7 @@ const Certificates = () => {
 
   return (
     <section className="w-full min-h-[calc(100vh-80px)] bg-background py-10 relative">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-text text-h1 font-roboto">Certificados</h2>
-        </div>
+      <div className="max-w-6xl mx-auto px-4 mt-28">
         {isStacked ? (
           renderAnimatedCertificates()
         ) : expandedCertificate ? (

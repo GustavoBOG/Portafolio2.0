@@ -7,17 +7,14 @@ const AboutMe = () => {
   return (
     <section className="w-full min-h-[calc(100vh-80px)] bg-background py-16 relative">
       <div className="container mx-auto px-4">
-        {/* Título */}
-        <div className="mb-10">
-          <h2 className="text-text text-h1 font-roboto">Sobre mí</h2>
-        </div>
+        
         
         {/* Contenido principal */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between relative">
           {/* Columna izquierda - Texto */}
           <div className="lg:w-8/12 pr-0 lg:pr-12 z-10">
             <div className="lg:max-w-full">
-              <p className="text-text text-h2 mb-2 leading-relaxed">
+              <p className="text-text text-h3 lg:text-h1 mb-8 leading-relaxed ">
                 Hola, soy Gustavo Bolívar.
               </p>
               <p className="text-text text-h5 mb-2 leading-relaxed">
@@ -28,10 +25,10 @@ const AboutMe = () => {
               <p className="text-text text-h5 mb-2 leading-relaxed">
                 Ahora, me he propuesto desarrollar y aprovechar al máximo todas mis habilidades en el mundo de la tecnología.
               </p>
-              <p className="text-text text-h4 mb-2 leading-relaxed">
+              <p className="text-text text-h3 lg:text-h2 mb-8 leading-relaxed">
                 ¿Y adivina qué?
               </p>
-              <p className="text-text text-h5 leading-relaxed">
+              <p className="text-text text-h5 leading-relaxed mb-8">
                 El resultado ha sido increíblemente satisfactorio y gratificante.
                 Me he convertido en un full stack developer motivado y comprometido a seguir creciendo.
                 Estoy decidido a convertirme en uno de los mejores en este campo, disfrutando cada paso del proceso.
@@ -46,8 +43,8 @@ const AboutMe = () => {
                 src="/images/robot.png" 
                 alt="Robot" 
                 className="relative w-full max-w-lg object-contain 
-             bottom-[-700px] sm:bottom-[-40px] md:bottom-[-60px] lg:bottom-10 
-             left-[50px] sm:left-[80px] md:left-[120px] lg:left-[150px]"
+             bottom-[-750px] sm:bottom-[-40px] md:bottom-[-60px] lg:bottom-10 
+             left-[-30px] sm:left-[80px] md:left-[120px] lg:left-[150px]"
               />
             </div>
           </div>

@@ -81,9 +81,6 @@ const Skills = () => {
   return (
     <section className="w-full min-h-[calc(100vh-80px)] bg-background py-10 relative">
       <div>
-        <div className="text-center">
-          <h2 className="text-text text-h1 font-roboto">Skills</h2>
-        </div>
         
         <div className="mb-10 w-full bg-header py-4 px-6 relative">
           <div className="grid grid-cols-3 gap-4 w-full mx-auto"> 
