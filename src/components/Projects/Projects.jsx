@@ -50,7 +50,7 @@ const Projects = () => {
       ],
       api: "https://developers.amadeus.com",
       githubUrl: "https://github.com/GustavoBOG/planificadorDeViajes",
-      pageUrl: "https://github.com/GustavoBOG/planificadorDeViajes",
+      pageUrl: "https://planificador-de-viajes.vercel.app/",
     },
   ];
 
