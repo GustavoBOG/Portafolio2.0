@@ -2,47 +2,48 @@ import { FaMapMarkerAlt, FaLinkedinIn, FaDiscord, FaInstagram, FaFacebookF } fro
 import { FaRegMessage } from "react-icons/fa6";
 import { VscGithub } from "react-icons/vsc";
 import { MdPhoneIphone } from "react-icons/md";
+import { TypeAnimation } from 'react-type-animation';
 
 const SocialIcons = ({ isMobile }) => {
   const iconSize = isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]";
-  
+
   const socialLinks = [
-    { 
-      href: "https://github.com/GustavoBOG", 
-      icon: VscGithub 
+    {
+      href: "https://github.com/GustavoBOG",
+      icon: VscGithub
     },
-    { 
-      href: "https://www.linkedin.com/in/gustavo-bolivar/", 
-      icon: FaLinkedinIn 
+    {
+      href: "https://www.linkedin.com/in/gustavo-bolivar/",
+      icon: FaLinkedinIn
     },
-    { 
-      href: "https://discord.com/users/grounda.", 
-      icon: FaDiscord 
+    {
+      href: "https://discord.com/users/grounda.",
+      icon: FaDiscord
     },
-    { 
-      href: "https://www.instagram.com/gusta_bolivar/", 
-      icon: FaInstagram 
+    {
+      href: "https://www.instagram.com/gusta_bolivar/",
+      icon: FaInstagram
     },
-    { 
-      href: "https://www.facebook.com/gustavo.bolivar.16", 
-      icon: FaFacebookF 
+    {
+      href: "https://www.facebook.com/gustavo.bolivar.16",
+      icon: FaFacebookF
     }
   ];
 
   return (
 
     <div className={`
-      ${isMobile 
-        ? "flex lg:hidden flex-col absolute right-[-10px] top-1/2 transform -translate-y-1/2 space-y-4" 
+      ${isMobile
+        ? "flex lg:hidden flex-col absolute right-[-10px] top-1/2 transform -translate-y-1/2 space-y-4"
         : "hidden lg:flex justify-center mt-8 gap-5"
       } text-text
     `}>
       {socialLinks.map((social, index) => (
-        <a 
+        <a
           key={index}
-          href={social.href} 
-          target="_blank" 
-          rel="noopener noreferrer" 
+          href={social.href}
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-primario text-text rounded-2xl p-3 hover:bg-vividBlue hover:scale-125 transition-all"
         >
           <social.icon className={iconSize} />
@@ -63,7 +64,25 @@ const Home = () => {
             Hola a todos!
           </span>
           <h1 className="text-text text-h2 font-roboto mt-3">Yo soy Gustavo</h1>
-          <p className="text-text text-h6">Desarrollador y Diseñador Web</p>
+          <div className="text-h4 min-h-[30px]">
+            <span className="text-text">I am </span>
+            <TypeAnimation
+              sequence={[
+                'a Developer.',
+                1500,
+                'a Designer.',
+                1500,
+                'Turning Ideas into Reality.',
+                1500,
+                'a Problem Solver.',
+                1500,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+              className="text-primario"
+            />
+          </div>
         </div>
 
         {/* Contenedor de imagen y redes sociales */}
@@ -72,12 +91,12 @@ const Home = () => {
           {/* Redes Sociales Móvil */}
           <SocialIcons isMobile={true} />
 
-          {/* Imagen de Perfil */} 
+          {/* Imagen de Perfil */}
           <div className="w-full max-w-sm lg:max-w-xl flex-shrink-0 select-none -mt-10 ml-0 sm:ml-4">
-            <img 
-              src="/images/photo.png" 
-              alt="Gustavo" 
-              className="w-full h-auto object-contain cursor-default" 
+            <img
+              src="/images/photo.png"
+              alt="Gustavo"
+              className="w-full h-auto object-contain cursor-default"
             />
           </div>
         </div>
@@ -91,7 +110,25 @@ const Home = () => {
               Hola a todos!
             </span>
             <h1 className="text-text text-h2 font-roboto mt-3">Yo soy Gustavo</h1>
-            <p className="text-text text-h6">Desarrollador y Diseñador Web</p>
+            <div className="text-h4 min-h-[30px]">
+              <span className="text-text">I am </span>
+              <TypeAnimation
+                sequence={[
+                  'a Developer.',
+                  1500,
+                  'a Designer.',
+                  1500,
+                  'Turning Ideas into Reality.',
+                  1500,
+                  'a Problem Solver.',
+                  1500,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                className="text-primario"
+              />
+            </div>
           </div>
 
           {/* Información de Contacto */}
