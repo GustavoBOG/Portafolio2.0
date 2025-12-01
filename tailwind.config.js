@@ -15,7 +15,7 @@ export default {
         text: "#FFFFFF", // Texto
         primario: "#51B6F9", // Azul Secundario
         vividBlue: "#115FFF", // Azul Vivo
-        midnightBlue: "#2626262626", // Azul Oscuro
+        midnightBlue: "#264470", // Azul Oscuro
         grisclaro: "#4B4949",//para la herramienta
         bombilla: "#F7FF09",//para la bombilla 
       },
