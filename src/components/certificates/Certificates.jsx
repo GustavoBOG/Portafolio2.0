@@ -11,10 +11,10 @@ const Certificates = () => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
-    
+
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
@@ -46,6 +46,13 @@ const Certificates = () => {
       logo: '/images/certificates/hackaboss.png',
       certificate: '/images/certificates/habd.png',
       background: 'bg-custom-gradient'
+    },
+    {
+      id: 5,
+      title: 'INICIACIÓN AL DESARROLLO CON LA IA',
+      logo: '/images/certificates/bslogo.png',
+      certificate: '/images/certificates/desarrolloIA.png',
+      background: 'bg-custom-gradient'
     }
   ];
 
@@ -73,11 +80,11 @@ const Certificates = () => {
 
   const renderExpandedCertificate = () => {
     const certificate = certificatesData.find(cert => cert.id === expandedCertificate);
-  
+
     if (isMobile) {
       return (
         <div className="flex justify-center items-center w-full transition-all duration-700 ease-in-out">
-          <div 
+          <div
             className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-xl cursor-pointer w-full max-w-sm"
             style={{ boxShadow: '16px 16px 4px rgba(0, 0, 0, 0.25)' }}
             onClick={() => handleCertificateClick(certificate.id)}
@@ -94,7 +101,7 @@ const Certificates = () => {
                 className="h-32 w-auto object-contain"
               />
             </div>
-  
+
             {/* Certificado expandido debajo en móvil */}
             <div className="w-full bg-white">
               <img
@@ -127,7 +134,7 @@ const Certificates = () => {
                 className="h-32 w-auto object-contain"
               />
             </div>
-  
+
             {/* Lado derecho - Imagen del certificado */}
             <div className="flex-grow bg-white">
               <img
@@ -141,7 +148,7 @@ const Certificates = () => {
       );
     }
   };
-  
+
   const renderAnimatedCertificates = () => {
     if (isMobile) {
       // Vista vertical para móviles - centrada
@@ -160,7 +167,7 @@ const Certificates = () => {
               <div className="h-full flex flex-col items-center justify-center p-6 text-center">
                 <h3 className="text-white text-lg font-roboto font-bold mb-4 mt-4">{certificate.title}</h3>
                 <div className="flex items-center justify-center h-40">
-                  <img 
+                  <img
                     src={certificate.logo}
                     alt={`Logo de ${certificate.title}`}
                     className="h-32 w-auto object-contain"
@@ -201,7 +208,7 @@ const Certificates = () => {
                   <div className="h-full flex flex-col items-center justify-center p-6 text-center">
                     <h3 className="text-white text-lg font-roboto font-bold mb-4 mt-4">{certificate.title}</h3>
                     <div className="flex items-center justify-center h-40">
-                      <img 
+                      <img
                         src={certificate.logo}
                         alt={`Logo de ${certificate.title}`}
                         className="h-32 w-auto object-contain"
