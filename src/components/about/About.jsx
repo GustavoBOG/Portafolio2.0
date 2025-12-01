@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaCode } from 'react-icons/fa';
 import { LiaCertificateSolid } from 'react-icons/lia';
 import { projects } from '../../data/projectsData';
+import { certificates } from '../../data/certificatesData';
 
 const AboutMe = () => {
   return (
@@ -92,7 +93,7 @@ const AboutMe = () => {
                     <span className="text-text text-h4 bg-primario rounded-3xl bg-opacity-50 px-2 py-2">
                       <LiaCertificateSolid />
                     </span>
-                    <span className="text-text text-h2">4</span>
+                    <span className="text-text text-h2">{certificates.length}</span>
                   </div>
                   <h3 className="text-text text-h3 font-roboto mb-1">Certificados</h3>
                   <p className="text-text text-h5">Mira mis certificaciones</p>
@@ -107,6 +108,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-
-
