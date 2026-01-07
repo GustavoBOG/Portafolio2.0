@@ -20,20 +20,22 @@ const AboutMe = () => {
                 Hola, soy Gustavo Bolívar.
               </p>
               <p className="text-text text-h5 mb-2 leading-relaxed">
-                Hasta hace poco, llevaba una vida como la de cualquier otra persona, con hobbies y aspiraciones.
-                Seguí el camino tradicional: estudié, busqué trabajo y me adapté a lo que se esperaba...
-                Pero un día decidí tomar un giro diferente y diseñar mi propio camino.
+                Mi camino no empezó en la programación, pero cuando descubrí lo que se siente al construir algo útil desde cero, supe que no había vuelta atrás.
               </p>
               <p className="text-text text-h5 mb-2 leading-relaxed">
-                Ahora, me he propuesto desarrollar y aprovechar al máximo todas mis habilidades en el mundo de la tecnología.
+                Decidí cambiar el rumbo de mi carrera para dedicarme a lo que de verdad me divierte: <strong>buscar soluciones reales a través del código.</strong>
+              </p>
+              <p className="text-text text-h5 mb-2 leading-relaxed">
+                No me conformo con que algo simplemente funcione; me gusta que tenga sentido y que aporte valor.
+              </p>
+              <p className="text-text text-h5 mb-2 leading-relaxed">
+                Aunque no soy diseñador de formación, soy de los que se fijan en los detalles y disfrutan creando interfaces que sean fáciles y agradables de usar.
               </p>
               <p className="text-text text-h3 lg:text-h2 mb-8 leading-relaxed">
-                ¿Y adivina qué?
+                ¿Mi filosofía?
               </p>
               <p className="text-text text-h5 leading-relaxed mb-8">
-                El resultado ha sido increíblemente satisfactorio y gratificante.
-                Me he convertido en un full stack developer motivado y comprometido a seguir creciendo.
-                Estoy decidido a convertirme en uno de los mejores en este campo, disfrutando cada paso del proceso.
+                Muy simple: <strong>Honestidad ante todo, aprender algo nuevo cada día y ponerle ganas a cada proyecto que construyo.</strong>
               </p>
             </div>
           </div>
@@ -73,7 +75,7 @@ const AboutMe = () => {
                     <span className="text-text text-h2">{projects.length}</span>
                   </div>
                   <h3 className="text-text text-h3 font-roboto mb-1">Proyectos</h3>
-                  <p className="text-text text-h5">Mira lo que he construido</p>
+                  <p className="text-text text-h5">ver portafolio</p>
                 </div>
               </div>
             </Link>
@@ -96,7 +98,7 @@ const AboutMe = () => {
                     <span className="text-text text-h2">{certificates.length}</span>
                   </div>
                   <h3 className="text-text text-h3 font-roboto mb-1">Certificados</h3>
-                  <p className="text-text text-h5">Mira mis certificaciones</p>
+                  <p className="text-text text-h5">ver logros</p>
                 </div>
               </div>
             </Link>

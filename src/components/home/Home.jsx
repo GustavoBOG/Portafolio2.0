@@ -65,16 +65,15 @@ const Home = () => {
           </span>
           <h1 className="text-text text-h2 font-roboto mt-3">Yo soy Gustavo</h1>
           <div className="text-h4 min-h-[30px]">
-            <span className="text-text">I am </span>
             <TypeAnimation
               sequence={[
-                'a Developer.',
+                'Desarrollador Full Stack.',
                 1500,
-                'a Designer.',
+                'Entusiasta del diseño web.',
                 1500,
-                'Turning Ideas into Reality.',
+                'Convirtiendo ideas en realidad.',
                 1500,
-                'a Problem Solver.',
+                'Resolviendo problemas con código.',
                 1500,
               ]}
               wrapper="span"
@@ -94,7 +93,7 @@ const Home = () => {
           {/* Imagen de Perfil */}
           <div className="w-full max-w-sm lg:max-w-xl flex-shrink-0 select-none -mt-10 ml-0 sm:ml-4">
             <img
-              src="/images/photo.png"
+              src="/images/profile2.png"
               alt="Gustavo"
               className="w-full h-auto object-contain cursor-default"
             />
@@ -111,16 +110,15 @@ const Home = () => {
             </span>
             <h1 className="text-text text-h2 font-roboto mt-3">Yo soy Gustavo</h1>
             <div className="text-h4 min-h-[30px]">
-              <span className="text-text">I am </span>
               <TypeAnimation
                 sequence={[
-                  'a Developer.',
+                  'Desarrollador Full Stack.',
                   1500,
-                  'a Designer.',
+                  'Entusiasta del diseño web.',
                   1500,
-                  'Turning Ideas into Reality.',
+                  'Convirtiendo ideas en realidad.',
                   1500,
-                  'a Problem Solver.',
+                  'Resolviendo problemas con código.',
                   1500,
                 ]}
                 wrapper="span"
